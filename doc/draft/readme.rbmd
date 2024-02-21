@@ -1,0 +1,18 @@
+Procify
+===
+
+Method to proc conversion path
+
+Installation
+---
+```
+gem install procify
+```
+
+Usage
+---
+#[sample/basic.rb]
+
+Authors
+---
+Łukasz Pomietło (oficjalnyadreslukasza@gmail.com)
