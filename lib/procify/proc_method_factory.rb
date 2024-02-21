@@ -4,14 +4,15 @@ class ProcMethodFactory
   end
 
   def method_missing name, *curry
+    source = @source
     proc do |*a, **na, &b|
-      method = @source.method name
+      method = source.method name
       arity = method.arity
       a = [*curry, *a]
       if arity >= 0
-        @source.send(name, *a[...arity], **na, &b)
+        source.send(name, *a[...arity], **na, &b)
       else
-        @source.send(name, *a, **na, &b)
+        source.send(name, *a, **na, &b)
       end
     end
   end
