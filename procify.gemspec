@@ -12,8 +12,8 @@ Gem::Specification.new do |s|
   s.files       = Dir.glob('lib/**/*')
   s.homepage    = "https://github.com/lpogic/procify"
   s.license       = "Zlib"
-  s.required_ruby_version     = ">= 3.2.2"
+  s.required_ruby_version     = ">= 3.0.6"
   s.metadata = {
-    "documentation_uri" => "https://github.com/lpogic/procify/blob/master/doc/wiki/README.md"
+    "documentation_uri" => "https://github.com/lpogic/procify/blob/main/doc/wiki/README.md"
   }
 end

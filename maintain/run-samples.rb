@@ -21,11 +21,12 @@ def each_file_ancestor base, dir, &b
 end
 
 each_file_ancestor '.', 'sample' do |script|
-  if script.end_with? ".rb"
+  if script.end_with?(".rb") && !script.end_with?("template.rb")
     if !options[:start] || options[:start] == script
       options[:start] = nil
-      puts script
-      `ruby ./#{script}`
+      puts script + ":"
+      puts `ruby ./#{script}`
+      $stdin.gets.chomp
     end
   end
 end
