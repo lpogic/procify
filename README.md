@@ -164,7 +164,7 @@ p second.call # => 1
 
 ### 11.
 ```RUBY
-require_relative '../lib/procify'
+require 'procify'
 
 class Foo
   def initialize arg

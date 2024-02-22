@@ -1,4 +1,4 @@
-require_relative '../lib/procify'
+require 'procify'
 
 class Foo
   def initialize arg
