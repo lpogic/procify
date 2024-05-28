@@ -1,7 +1,8 @@
-Procify
+procify - Method to proc conversion path
 ===
 
-Method to proc conversion path
+Handy dsl for wrapping methods in procs.
+
 
 Installation
 ---
@@ -127,7 +128,7 @@ p bar.instance_exec(&a) # => "bar"
 p bar.instance_exec(&b) # => "foo"
 ```
 
-### 8.
+### 8. 
 ```RUBY
 require 'procify'
 
@@ -138,7 +139,7 @@ a = 4
 p b.call # => 3
 ```
 
-### 9.
+### 9. 
 ```RUBY
 require 'procify'
 
@@ -150,7 +151,7 @@ b.call
 p a # => [1, 1, 1]
 ```
 
-### 10.
+### 10. 
 ```RUBY
 require 'procify'
 
@@ -162,7 +163,7 @@ p second.call # => 1
 
 ```
 
-### 11.
+### 11. 
 ```RUBY
 require 'procify'
 
@@ -183,6 +184,7 @@ GC.start # => "foo"
 
 ```
 
+
 Authors
 ---
-Łukasz Pomietło (oficjalnyadreslukasza@gmail.com)
+- Łukasz Pomietło (oficjalnyadreslukasza@gmail.com)

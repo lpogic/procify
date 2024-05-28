@@ -4,8 +4,8 @@ Gem::Specification.new do |s|
   s.name        = "procify"
   s.version     = Procify::VERSION
   s.summary     = "Method to proc conversion path"
-  s.description = <<-EOT
-
+  s.description = <<~EOT
+    Handy dsl for wrapping methods in procs.
   EOT
   s.authors     = ["Łukasz Pomietło"]
   s.email       = "oficjalnyadreslukasza@gmail.com"
@@ -14,6 +14,7 @@ Gem::Specification.new do |s|
   s.license       = "Zlib"
   s.required_ruby_version     = ">= 3.0.6"
   s.metadata = {
-    "documentation_uri" => "https://github.com/lpogic/procify/blob/main/doc/wiki/README.md"
+    "documentation_uri" => "https://github.com/lpogic/procify/blob/main/doc/wiki/README.md",
+    "homepage_uri" => "https://github.com/lpogic/procify"
   }
 end

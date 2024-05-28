@@ -125,7 +125,7 @@ p bar.instance_exec(&a) # => "bar"
 p bar.instance_exec(&b) # => "foo"
 ```
 
-### 8.
+### 8. 
 ```RUBY
 require 'procify'
 
@@ -136,7 +136,7 @@ a = 4
 p b.call # => 3
 ```
 
-### 9.
+### 9. 
 ```RUBY
 require 'procify'
 
@@ -148,7 +148,7 @@ b.call
 p a # => [1, 1, 1]
 ```
 
-### 10.
+### 10. 
 ```RUBY
 require 'procify'
 
@@ -160,7 +160,7 @@ p second.call # => 1
 
 ```
 
-### 11.
+### 11. 
 ```RUBY
 require 'procify'
 
@@ -180,3 +180,4 @@ foo = nil
 GC.start # => "foo"
 
 ```
+

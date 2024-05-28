@@ -1,0 +1,28 @@
+#{ gemspec.name }#{ " - #{ gemspec.summary }" if gemspec.summary }
+===
+
+#{ gemspec.description }
+
+Installation
+---
+```
+gem install #{ gemspec.name }
+```
+
+Usage
+---
+#{ sample.call "Basic method to proc conversion", "sample/a1.rb" }
+#{ sample.call "Method with argument", "sample/a2.rb" }
+#{ sample.call "Custom object method to proc conversion", "sample/a3.rb" }
+#{ sample.call "Argument providing during conversion", "sample/a4.rb" }
+#{ sample.call "Unlike using #method, freshest object method version is always called", "sample/b1.rb" }
+#{ sample.call "The conversion can be performed even before the actual method is defined", "sample/b2.rb" }
+#{ sample.call "The converted method is insensitive to context changes", "sample/b3.rb" }
+#{ sample.call "", "sample/c1.rb" }
+#{ sample.call "", "sample/c2.rb" }
+#{ sample.call "", "sample/c3.rb" }
+#{ sample.call "", "sample/c4.rb" }
+
+Authors
+---
+#{ gemspec.authors.zip(Array(gemspec.email)).map{ "- #{_1} (#{_2})" }.join("\n") }
