@@ -3,16 +3,16 @@ class ProcMethodFactory
     @source = source
   end
 
-  def method_missing name, *curry
+  def method_missing name, *stored_arguments, **stored_named_arguments
     source = @source
-    proc do |*a, **na, &b|
+    proc do |*arguments, **named_arguments, &b|
       method = source.method name
       arity = method.arity
-      a = [*curry, *a]
+      arg = [*stored_arguments, *arguments]
       if arity >= 0
-        source.send(name, *a[...arity], **na, &b)
+        source.send(name, *arg[...arity], **stored_named_arguments, **named_arguments, &b)
       else
-        source.send(name, *a, **na, &b)
+        source.send(name, *arg, **stored_named_arguments, **named_arguments, &b)
       end
     end
   end
